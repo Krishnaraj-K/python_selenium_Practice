@@ -1,3 +1,14 @@
+# TestCase:
+#     Open Browser
+#     Open URL - https://admin-demo.nopcommerce.com/
+#     Enter Username - admin@yourstore.com
+#     Enter Password - admin
+#     Click On Login.
+#     Capture title of the homepage. (Actual Title)
+#     Verify title of the page OrangeHRM (Expected)
+#     Close Browser
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
