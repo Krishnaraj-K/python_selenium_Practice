@@ -15,6 +15,7 @@ from selenium.webdriver.firefox.service import Service
 
 driver = webdriver.Firefox()
 driver.get("https://admin-demo.nopcommerce.com/")
+driver.maximize_window()
 driver.find_element(By.ID,"Email").clear()
 driver.find_element(By.ID,"Email").send_keys("admin@yourstore.com")
 driver.find_element(By.ID,"Password").clear()
