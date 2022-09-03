@@ -25,3 +25,25 @@ def test_chk_no_of_sliders():
     print(len(sliders)) #Total number of sliders in the webpage
     driver.close()
 test_chk_no_of_sliders()
+
+def test_titlecompare():
+    driver = webdriver.Firefox()
+    driver.get("https://admin-demo.nopcommerce.com/")
+    driver.maximize_window()
+    driver.find_element(By.ID,"Email").clear()
+    driver.find_element(By.ID,"Email").send_keys("admin@yourstore.com")
+    driver.find_element(By.ID,"Password").clear()
+    driver.find_element(By.ID,"Password").send_keys("admin")
+    driver.find_element(By.CSS_SELECTOR,".button-1").click()
+
+    act_title = driver.title
+    exp_title = "Dashboard / nopCommerce administration"
+
+    if act_title == exp_title:
+        print("Login Test Passed")
+    else:
+        print("Login Test Failed")
+
+    driver.close()
+
+test_titlecompare()
